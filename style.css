@@ -1,0 +1,559 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8eaf6,
+            #f3e5f5
+        );
+
+    color: #222;
+
+    line-height: 1.6;
+
+    padding: 30px 15px;
+}
+
+
+.container {
+    max-width: 950px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background:
+        linear-gradient(
+            135deg,
+            #4a148c,
+            #6a1b9a
+        );
+
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+header h1 {
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+
+header p {
+    font-size: 16px;
+
+    opacity: 0.9;
+}
+
+
+/* =========================
+   DADOS
+========================= */
+
+.dados {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.dados label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.dados input {
+    width: 100%;
+
+    padding: 12px;
+
+    border:
+        2px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   QUESTÕES
+========================= */
+
+.questao {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.08);
+
+    border-left:
+        5px solid #6a1b9a;
+}
+
+
+.questao h2 {
+    color: #4a148c;
+
+    font-size: 19px;
+
+    margin-bottom: 15px;
+}
+
+
+.topico {
+    display: inline-block;
+
+    background: #ede7f6;
+
+    color: #4a148c;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.comando {
+    background: #f3e5f5;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   ALTERNATIVAS
+========================= */
+
+.alternativa {
+    display: block;
+
+    background: #fafafa;
+
+    padding: 12px;
+
+    margin: 8px 0;
+
+    border-radius: 8px;
+
+    border: 1px solid #ddd;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.alternativa:hover {
+    background: #f3e5f5;
+
+    border-color: #8e24aa;
+
+    transform: translateX(3px);
+}
+
+
+.alternativa input {
+    margin-right: 8px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: #8e24aa;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(142, 36, 170, 0.1);
+}
+
+
+textarea {
+    width: 100%;
+
+    min-height: 110px;
+
+    padding: 12px;
+
+    border:
+        2px solid #ddd;
+
+    border-radius: 8px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   TABELAS
+========================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+}
+
+
+th {
+    background: #6a1b9a;
+
+    color: white;
+
+    padding: 12px;
+
+    text-align: left;
+}
+
+
+td {
+    padding: 10px;
+
+    border: 1px solid #ddd;
+}
+
+
+td input,
+td select {
+    width: 100%;
+
+    padding: 9px;
+
+    border:
+        1px solid #ccc;
+
+    border-radius: 6px;
+
+    background: white;
+}
+
+
+/* =========================
+   VERDADEIRO / FALSO
+========================= */
+
+.verdadeiro-falso {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 8px;
+}
+
+
+.verdadeiro-falso label {
+    padding: 8px 15px;
+
+    border:
+        1px solid #ccc;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.verdadeiro-falso label:hover {
+    background: #f3e5f5;
+
+    border-color: #8e24aa;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.botao-area {
+    text-align: center;
+
+    margin: 30px 0;
+}
+
+
+button {
+    background:
+        linear-gradient(
+            135deg,
+            #6a1b9a,
+            #8e24aa
+        );
+
+    color: white;
+
+    border: none;
+
+    padding: 16px 35px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px
+        rgba(106, 27, 154, 0.3);
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(106, 27, 154, 0.4);
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+.resultado {
+    display: none;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    margin-top: 25px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+
+.resultado h2 {
+    color: #4a148c;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+
+.nota {
+    font-size: 50px;
+
+    font-weight: bold;
+
+    color: #6a1b9a;
+
+    margin: 15px 0;
+}
+
+
+.mensagem {
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   CORREÇÃO
+========================= */
+
+.correcao {
+    text-align: left;
+
+    margin-top: 25px;
+}
+
+
+.correcao h3 {
+    color: #4a148c;
+
+    margin-bottom: 15px;
+}
+
+
+.correcao-item {
+    padding: 15px;
+
+    margin: 10px 0;
+
+    border-radius: 8px;
+}
+
+
+.certo {
+    background: #e8f5e9;
+
+    border-left:
+        5px solid #2e7d32;
+}
+
+
+.errado {
+    background: #ffebee;
+
+    border-left:
+        5px solid #c62828;
+}
+
+
+.explicacao {
+    margin-top: 8px;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+
+.aviso {
+    background: #fff3cd;
+
+    border-left:
+        5px solid #ffc107;
+
+    padding: 15px;
+
+    margin-top: 15px;
+
+    text-align: left;
+
+    border-radius: 8px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+    text-align: center;
+
+    color: #555;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 15px 8px;
+    }
+
+
+    header {
+        padding: 25px 15px;
+    }
+
+
+    header h1 {
+        font-size: 25px;
+    }
+
+
+    .questao {
+        padding: 18px;
+    }
+
+
+    table {
+        font-size: 13px;
+    }
+
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+
+    .verdadeiro-falso {
+        flex-direction: column;
+    }
+
+
+    .nota {
+        font-size: 40px;
+    }
+
+}
